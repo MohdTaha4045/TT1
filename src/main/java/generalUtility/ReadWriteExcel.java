@@ -23,7 +23,7 @@ public class ReadWriteExcel
 	{
 		String data = "";
 	try {
-			FileInputStream fis = new FileInputStream("C:\\Users\\Fleek\\eclipse-workspace\\Testing.Treatians\\data\\LoginCredential.xlsx");
+			FileInputStream fis = new FileInputStream(".\\data\\LoginCredential.xlsx");
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet s = wb.getSheet("Sheet1");
 			Row r = s.getRow(rNum);
@@ -35,7 +35,7 @@ public class ReadWriteExcel
 			{
 			try
 			{
-			FileInputStream fis = new FileInputStream("C:\\Users\\Fleek\\eclipse-workspace\\Testing.Treatians\\data\\LoginCredential.xlsx");
+			FileInputStream fis = new FileInputStream(".\\data\\LoginCredential.xlsx");
 			Workbook wb = WorkbookFactory.create(fis);
 			Sheet s = wb.getSheet("Sheet1");
 			Row r = s.getRow(rNum);

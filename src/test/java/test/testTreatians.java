@@ -76,7 +76,7 @@ public class testTreatians extends TreatiansBaseClass
 	@DataProvider(name = "logindata")
 	public String[][]  getData() throws IOException
 	{
-		String path = "C:\\Users\\Fleek\\eclipse-workspace\\Testing.Treatians\\data\\LoginCredential.xlsx";
+		String path = ".\\data\\LoginCredential.xlsx";
 		XLUtility xlutil = new XLUtility(path);
 		int totalrows = xlutil.getRowCount("Sheet1");
 		int totalcolumn = xlutil.getCellCount("Sheet1", 1);
