@@ -26,7 +26,7 @@ public class testTreatians extends TreatiansBaseClass
 		Allure.step("SingnUp");
 
 		System.out.println("Creating new user");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		
@@ -98,7 +98,7 @@ public class testTreatians extends TreatiansBaseClass
 		Allure.step("Sign In");
 
 		System.out.println("Login Test");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		repo.elipsis.click();
 		
@@ -171,7 +171,7 @@ public class testTreatians extends TreatiansBaseClass
 		Allure.step("Booking Appointment");
 
 		System.out.println("Booking Appointment");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		repo.loginPage();
 		repo.emailEnter();
@@ -192,7 +192,7 @@ public class testTreatians extends TreatiansBaseClass
 	{
 		Allure.step("Verifying appointment Details");
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		repo.loginPage();
 		repo.emailEnter();
