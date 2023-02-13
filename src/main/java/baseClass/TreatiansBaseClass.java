@@ -16,6 +16,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.qameta.allure.Allure;
@@ -24,7 +25,7 @@ public class TreatiansBaseClass
 {
 		public static AndroidDriver driver;
 		@SuppressWarnings("deprecation")
-		@BeforeClass
+		@BeforeMethod
 		public static void setup() throws MalformedURLException, InterruptedException
 	 
 		{
@@ -55,7 +56,7 @@ public class TreatiansBaseClass
 		@AfterTest
 		public void tearDown()
 		{
-			driver.quit();
+			/////driver.quit();
 		}
 		public void onTestFailure(ITestResult result) 
 		{
