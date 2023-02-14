@@ -5,8 +5,7 @@
     <classes>
       <class name="test.testTreatians">
         <methods>
-          <include name="verifyAppointment"/>
-          <include name="loginTest1" invocation-numbers="1 4"/>
+          <include name="loginTest1" invocation-numbers="2 4"/>
           <include name="setup"/>
           <include name="BookAppointment"/>
           <include name="tearDown"/>

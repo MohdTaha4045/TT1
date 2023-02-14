@@ -167,7 +167,7 @@ public class testTreatians extends TreatiansBaseClass
 	@Test(priority = 3)
 	public void BookAppointment()
 	{
-		this.driver=driver;
+		//this.driver=driver;
 		Allure.step("Booking Appointment");
 
 		System.out.println("Booking Appointment");
@@ -178,7 +178,7 @@ public class testTreatians extends TreatiansBaseClass
 		repo.passwordEnter();
 		repo.clickSignInButton();
 		repo.drAdhishwar.click();
-		repo.bookAppointment.click();
+		repo.bookAppoinmentButton.click();
 		repo.availableDate.click();
 		repo.scrollWindow();
 		repo.availableTime.click();

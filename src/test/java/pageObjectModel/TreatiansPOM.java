@@ -121,20 +121,20 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Book Appointment\")")
 	public WebElement bookAppoinmentButton;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"2\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"17\")")
 	public WebElement availableDate;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"16:45 - 17:00\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"08:15 - 08:30\")")
 	public WebElement availableTime;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
 	public WebElement myAppointment;
 	
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 31-Jan-2023\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 17-Feb-2023\")")
 	public WebElement ActDate;
 
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 16:45 - 17:00\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 08:15 - 08:30\")")
 	public WebElement ActTime;
 	
 	
