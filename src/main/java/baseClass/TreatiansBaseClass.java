@@ -25,7 +25,7 @@ public class TreatiansBaseClass
 {
 		public static AndroidDriver driver;
 		@SuppressWarnings("deprecation")
-		@BeforeMethod
+		@BeforeClass
 		public static void setup() throws MalformedURLException, InterruptedException
 	 
 		{

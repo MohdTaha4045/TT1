@@ -26,7 +26,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.widget.Button")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"menu\")")
 	public WebElement elipsis ;
 	
 	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"person circle Log in\"]/android.view.View")
@@ -124,7 +124,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"17\")")
 	public WebElement availableDate;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"08:15 - 08:30\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"13:15 - 13:30\")")
 	public WebElement availableTime;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
@@ -236,7 +236,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	
 	public void passsAddress()
 	{
-		Address.click();
+		//Address.click();
 		Address.sendKeys("12/486 Gulzaar baagh");
 	}
 	

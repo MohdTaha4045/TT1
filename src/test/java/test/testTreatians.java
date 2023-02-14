@@ -56,8 +56,11 @@ public class testTreatians extends TreatiansBaseClass
 		
 		repo.clickRegister();
 		
+		
 		System.out.println("Accound successfully Created");
-		driver.quit();
+		repo.backButton.click();
+		repo.backButton.click();
+
 	}
 	
 	/*@Test(priority = 1)

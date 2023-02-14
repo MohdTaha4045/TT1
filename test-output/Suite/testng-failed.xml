@@ -5,9 +5,9 @@
     <classes>
       <class name="test.testTreatians">
         <methods>
-          <include name="loginTest1" invocation-numbers="2 4"/>
+          <include name="verifyAppointment"/>
+          <include name="creatingNewUser"/>
           <include name="setup"/>
-          <include name="BookAppointment"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- test.testTreatians -->
