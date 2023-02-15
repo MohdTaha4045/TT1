@@ -20,7 +20,7 @@ public class testTreatians extends TreatiansBaseClass
 {
 	
 
-	/*@Test(priority = 1) 
+	@Test(priority = 1) 
 	public void creatingNewUser() throws InterruptedException
 	{
 		Allure.step("SingnUp");
@@ -55,10 +55,11 @@ public class testTreatians extends TreatiansBaseClass
 		repo.passsAddress();
 		
 		repo.clickRegister();
-		
-		
+			
 		System.out.println("Accound successfully Created");
+		
 		repo.backButton.click();
+		Thread.sleep(3000);
 		repo.backButton.click();
 
 	}
@@ -101,8 +102,6 @@ public class testTreatians extends TreatiansBaseClass
 		repo.loginPassword.click();
 		repo.loginPassword.sendKeys(Password);
 		
-	
-		//System.out.println("these login credential are : "+Exp_Result);
 		repo.signInButton.click();
 		Thread.sleep(3000);
 		
@@ -130,9 +129,9 @@ public class testTreatians extends TreatiansBaseClass
 			repo.backButton.click();
 		}
 
-	}*/
+	}
 	
-	@Test(priority = 1)
+	@Test(priority = 3)
 	public void BookAppointment()
 	{
 		//this.driver=driver;
@@ -156,7 +155,7 @@ public class testTreatians extends TreatiansBaseClass
 		repo.home.click();
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 4)
 	public void verifyAppointment()
 	{
 		Allure.step("Verifying appointment Details");
@@ -169,8 +168,8 @@ public class testTreatians extends TreatiansBaseClass
 		repo.clickSignInButton();
 		repo.elipsis.click();
 		repo.myAppointment.click();
-		String expDate = "31";
-		String expTime = "16:45 - 17:00";
+		String expDate = "17";
+		String expTime = "11:15 - 11:30";
 		String actDate = repo.ActDate.getText();
 		System.out.println(actDate);
 		String actTime = repo.ActTime.getText();

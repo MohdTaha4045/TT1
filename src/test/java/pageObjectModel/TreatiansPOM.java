@@ -92,7 +92,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View")
 	public WebElement Adhishwar;
 
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
+	@AndroidFindBy(xpath = "/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
 	public WebElement bookAppointment;
 	
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.app.Dialog/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
@@ -124,7 +124,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"17\")")
 	public WebElement availableDate;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"10:15 - 10:30\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"12:15 - 12:30\")")
 	public WebElement availableTime;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
@@ -136,7 +136,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 17-Feb-2023\")")
 	public WebElement ActDate;
 
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 10:15 - 10:30\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 11:15 - 11:30\")")
 	public WebElement ActTime;
 	
 	

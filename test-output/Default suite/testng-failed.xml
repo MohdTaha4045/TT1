@@ -5,7 +5,6 @@
     <classes>
       <class name="test.testTreatians">
         <methods>
-          <include name="verifyAppointment"/>
           <include name="setup"/>
           <include name="BookAppointment"/>
           <include name="tearDown"/>
