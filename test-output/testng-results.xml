@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="7" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-14T16:07:16 IST" name="Suite" finished-at="2023-02-14T16:11:17 IST" duration-ms="240983">
+  <suite started-at="2023-02-15T12:59:38 IST" name="Suite" finished-at="2023-02-15T13:01:33 IST" duration-ms="115301">
     <groups>
     </groups>
-    <test started-at="2023-02-14T16:07:16 IST" name="Test" finished-at="2023-02-14T16:11:17 IST" duration-ms="240983">
+    <test started-at="2023-02-15T12:59:38 IST" name="Test" finished-at="2023-02-15T13:01:33 IST" duration-ms="115301">
       <class name="test.testTreatians">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:07:16 IST" name="setup" finished-at="2023-02-14T16:07:44 IST" duration-ms="27518" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@7dfb0c0f]" started-at="2023-02-15T12:59:38 IST" name="setup" finished-at="2023-02-15T12:59:52 IST" duration-ms="13502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="creatingNewUser()[pri:1, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:07:44 IST" name="creatingNewUser" finished-at="2023-02-14T16:08:24 IST" duration-ms="40189" status="FAIL">
+        <test-method signature="BookAppointment()[pri:1, instance:test.testTreatians@7dfb0c0f]" started-at="2023-02-15T12:59:52 IST" name="BookAppointment" finished-at="2023-02-15T13:00:59 IST" duration-ms="67694" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})]]>
+              <![CDATA[Can't locate an element by this strategy: By.chained({AppiumBy.androidUIAutomator: new UiSelector().text("10:15 - 10:30")})]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({AppiumBy.androidUIAutomator: new UiSelector().text("10:15 - 10:30")})
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:125)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
 at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$d27c0df4.click(<generated>)
-at pageObjectModel.TreatiansPOM.signUp(TreatiansPOM.java:153)
-at test.testTreatians.creatingNewUser(testTreatians.java:33)
+at test.testTreatians.BookAppointment(testTreatians.java:152)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -49,13 +48,13 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@211febf3 (tried for 1 second(s) with 500 milliseconds interval)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@13da7ab0 (tried for 1 second(s) with 500 milliseconds interval)
 at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:98)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:118)
-... 30 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})
+... 29 more
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({AppiumBy.androidUIAutomator: new UiSelector().text("10:15 - 10:30")})
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.8.0', revision: '267030adea'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
@@ -74,155 +73,49 @@ at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(A
 at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:171)
 at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:164)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 32 more
+... 31 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- creatingNewUser -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:08:34 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:08:51 IST" duration-ms="17928" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gayaas@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:08:51 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:09:07 IST" duration-ms="15776" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Gayaas@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:09:07 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:09:22 IST" duration-ms="15177" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[GAYAAS@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:09:22 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:09:35 IST" duration-ms="12308" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gayaas@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[87654321]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:09:35 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:09:47 IST" duration-ms="12417" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[gayaas@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="loginTest1(java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:09:47 IST" name="loginTest1" data-provider="logindata" finished-at="2023-02-14T16:10:01 IST" duration-ms="14298" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[gayaas@]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[12345678]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginTest1 -->
-        <test-method signature="BookAppointment()[pri:3, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:10:01 IST" name="BookAppointment" finished-at="2023-02-14T16:10:28 IST" duration-ms="26902" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- BookAppointment -->
-        <test-method signature="verifyAppointment()[pri:4, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:10:28 IST" name="verifyAppointment" finished-at="2023-02-14T16:11:14 IST" duration-ms="45278" status="FAIL">
+        <test-method signature="verifyAppointment()[pri:2, instance:test.testTreatians@7dfb0c0f]" started-at="2023-02-15T13:01:02 IST" name="verifyAppointment" finished-at="2023-02-15T13:01:32 IST" duration-ms="30196" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})]]>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [855b9da0-6920-477f-ae3e-f409ed8b1b2e, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView}]
+Capabilities {appium:appActivity: com.treatians.MainActivity, appium:appPackage: com.treatians, appium:databaseEnabled: false, appium:desired: {appActivity: com.treatians.MainActivity, appPackage: com.treatians, deviceName: Pixel 4XL API 30, platformName: android, uuid: emulator-5554}, appium:deviceApiLevel: 33, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 13, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:uuid: emulator-5554, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 855b9da0-6920-477f-ae3e-f409ed8b1b2e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:125)
-at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.intercept(InterceptorOfASingleElement.java:59)
-at org.openqa.selenium.remote.RemoteWebElement$$EnhancerByCGLIB$$d27c0df4.click(<generated>)
-at pageObjectModel.TreatiansPOM.loginPage(TreatiansPOM.java:146)
-at test.testTreatians.verifyAppointment(testTreatians.java:200)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [855b9da0-6920-477f-ae3e-f409ed8b1b2e, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView}]
+Capabilities {appium:appActivity: com.treatians.MainActivity, appium:appPackage: com.treatians, appium:databaseEnabled: false, appium:desired: {appActivity: com.treatians.MainActivity, appPackage: com.treatians, deviceName: Pixel 4XL API 30, platformName: android, uuid: emulator-5554}, appium:deviceApiLevel: 33, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 560, appium:deviceScreenSize: 1440x3040, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 3.5, appium:platformVersion: 13, appium:statBarHeight: 98, appium:takesScreenshot: true, appium:uuid: emulator-5554, appium:viewportRect: {height: 2858, left: 0, top: 98, width: 1440}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 855b9da0-6920-477f-ae3e-f409ed8b1b2e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:262)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at pageObjectModel.TreatiansPOM.<init>(TreatiansPOM.java:110)
+at test.testTreatians.verifyAppointment(testTreatians.java:165)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -249,39 +142,13 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@22ae905f (tried for 1 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:263)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:98)
-at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:118)
-... 30 more
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.chained({By.xpath: //android.view.View[@content-desc="person circle Log in"]/android.view.View})
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.0', revision: '267030adea'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: driver.version: RemoteWebDriver
-at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:77)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:50)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:136)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:119)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:171)
-at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:164)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
-... 32 more
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAppointment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@12591ac8]" started-at="2023-02-14T16:11:17 IST" name="tearDown" finished-at="2023-02-14T16:11:17 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@7dfb0c0f]" started-at="2023-02-15T13:01:33 IST" name="tearDown" finished-at="2023-02-15T13:01:33 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

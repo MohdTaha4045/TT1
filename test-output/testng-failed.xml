@@ -6,8 +6,8 @@
       <class name="test.testTreatians">
         <methods>
           <include name="verifyAppointment"/>
-          <include name="creatingNewUser"/>
           <include name="setup"/>
+          <include name="BookAppointment"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- test.testTreatians -->

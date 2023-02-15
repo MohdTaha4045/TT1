@@ -20,7 +20,7 @@ public class testTreatians extends TreatiansBaseClass
 {
 	
 
-	@Test(priority = 1) 
+	/*@Test(priority = 1) 
 	public void creatingNewUser() throws InterruptedException
 	{
 		Allure.step("SingnUp");
@@ -63,18 +63,6 @@ public class testTreatians extends TreatiansBaseClass
 
 	}
 	
-	/*@Test(priority = 1)
-	public void login() throws InterruptedException, IOException
-	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.loginPage();
-		repo.emailEnter();
-		repo.passwordEnter();
-		repo.clickSignInButton();
-		Thread.sleep(5000);
-		System.out.println("Login Successful!");
-	}*/
 	
 	@DataProvider(name = "logindata")
 	public String[][]  getData() throws IOException
@@ -142,32 +130,9 @@ public class testTreatians extends TreatiansBaseClass
 			repo.backButton.click();
 		}
 
-	}
-	
-	/*@Test(priority = 1)
-	public void login() throws InterruptedException, BiffException, IOException
-	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		TreatiansPOM repo=new TreatiansPOM(driver);
-		ReadWriteExcel d = new ReadWriteExcel();
-		repo.loginPage();
-		repo.loginParameter(d.readExcel("LoginCredential",1,0),d.readExcel("LoginCredential",1,1));
-		Thread.sleep(5000);
-		System.out.println("Login Successful!");
 	}*/
 	
-	
-	/*@Test(priority = 3)
-	public void logOut()
-	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.logOut();
-		System.out.println("LogOut Succesful!");
-		
-	}*/
-	
-	@Test(priority = 3)
+	@Test(priority = 1)
 	public void BookAppointment()
 	{
 		//this.driver=driver;
@@ -187,10 +152,11 @@ public class testTreatians extends TreatiansBaseClass
 		repo.availableTime.click();
 		repo.bookAppoinmentButton.click();
 		System.out.println("booking successful");
-		
+		repo.elipsis.click();
+		repo.home.click();
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 2)
 	public void verifyAppointment()
 	{
 		Allure.step("Verifying appointment Details");
