@@ -1,7 +1,10 @@
 package pageObjectModel;
 
+import java.sql.Driver;
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -89,25 +92,23 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[1]/android.widget.Button[4]")
 	public WebElement FaridaBad;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View[1]/android.view.View")
-	public WebElement Adhishwar;
 
 	@AndroidFindBy(xpath = "/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
 	public WebElement bookAppointment;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.app.Dialog/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.widget.TextView[6]")
-	public WebElement twentyFive;
+	@AndroidFindBy(uiAutomator = "new UiSelector().className(android.widget.Button).instance(0)")
+	public WebElement slotwhenarrownotvisible;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.app.Dialog/android.view.View/android.view.View/android.view.View/android.view.View[3]/android.view.View[9]/android.widget.Button")
-	public WebElement nineThirty;
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"chevron back\")")
+	public WebElement arrow;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.app.Dialog/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button")
-	public WebElement bookConfirm;
+	@AndroidFindBy(uiAutomator = "new UiSelector().className(android.widget.Button).instance(2)")
+	public WebElement slotwhenarrowvisible;
 	
 	@AndroidFindBy(xpath = "//android.view.View[8]/android.view.View/android.view.View/android.view.View")
 	public WebElement logoutButton;
 	
-	String hompage = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView")).getText();
+	//String hompage = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView")).getText();
 
 	//@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Log out\")")
 	//public WebElement logoutButton;
@@ -124,21 +125,20 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"17\")")
 	public WebElement availableDate;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"12:15 - 12:30\")")
-	public WebElement availableTime;
-	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
 	public WebElement myAppointment;
+	
+	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"calendar My Appointments\"]/android.view.View")
+	public WebElement appointment;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Home\")")
 	public WebElement home;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 17-Feb-2023\")")
 	public WebElement ActDate;
-
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 11:15 - 11:30\")")
-	public WebElement ActTime;
 	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 09:30 - 09:45\")")
+	public WebElement ActTime;
 	
 	
 
@@ -277,13 +277,6 @@ public class TreatiansPOM extends TreatiansBaseClass
 		FaridaBad.click();
 	}
 	
-	public void bookingAppointment()
-	{
-		Adhishwar.click();
-		bookAppointment.click();
-		twentyFive.click();
-		nineThirty.click();
-	}
 	
 	public void scrollWindow()
 	{
@@ -300,12 +293,6 @@ public class TreatiansPOM extends TreatiansBaseClass
 		driver.perform(Arrays.asList(swipe));	
 	}
 	
-	public void confirmButton()
-	{
-		bookConfirm.click();
-
-	}
-	
 	public void logOut()
 	{
 		elipsis.click();
@@ -319,25 +306,32 @@ public class TreatiansPOM extends TreatiansBaseClass
 		signInButton.click();
 	}
 
-
-		
-	/*public void loginTest(String user,String pwd,String Exp)
+	public void docVeri()
 	{
-		elipsis.click();
+		List<WebElement> index = driver.findElements(By.className("android.widget.TextView"));
+	}
 		
-		LoginOption.click();
-		
-		loginEmail.click();
-		loginEmail.sendKeys(user);
-		
-		loginPassword.click();
-		loginPassword.sendKeys(pwd);
-		
+	public void clickslot() 
+	{
+	PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
+	Sequence scrolla = new Sequence(finger1, 1);
+	scrolla.addAction(finger1.createPointerMove(Duration.ofMillis(0),
+	PointerInput.Origin.viewport(), 500, 1700));
+	scrolla.addAction(finger1.createPointerDown(0));
+	scrolla.addAction(finger1.createPointerMove(Duration.ofMillis(500),
+	PointerInput.Origin.viewport(),500, 300));
+	scrolla.addAction(finger1.createPointerUp(0));
+	driver.perform(Arrays.asList(scrolla));
+	try {
+	if(arrow.isDisplayed()) {
+		slotwhenarrowvisible.click();
+	}
+	}
+	catch(NoSuchElementException e) {
+		slotwhenarrownotvisible.click();
+	}
+
 	
-		System.out.println("these login credential are : "+Exp);
-		signInButton.click();
-     }*/
-
-
+ }
 }
 

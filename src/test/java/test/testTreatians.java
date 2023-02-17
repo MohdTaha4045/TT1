@@ -140,7 +140,8 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println("Booking Appointment");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.loginPage();
+		repo.elipsis.click();
+		repo.LoginOption.click();
 		repo.emailEnter();
 		repo.passwordEnter();
 		repo.clickSignInButton();
@@ -148,28 +149,30 @@ public class testTreatians extends TreatiansBaseClass
 		repo.bookAppoinmentButton.click();
 		repo.availableDate.click();
 		repo.scrollWindow();
-		repo.availableTime.click();
+		repo.clickslot();
 		repo.bookAppoinmentButton.click();
 		System.out.println("booking successful");
 		repo.elipsis.click();
-		repo.home.click();
-	}
+		repo.logoutButton.click();	
+		}
 	
 	@Test(priority = 4)
 	public void verifyAppointment()
 	{
 		Allure.step("Verifying appointment Details");
-
+		System.out.println("Appointment Verification");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.loginPage();
+		repo.elipsis.click();
+		repo.LoginOption.click();
 		repo.emailEnter();
 		repo.passwordEnter();
 		repo.clickSignInButton();
+		
 		repo.elipsis.click();
-		repo.myAppointment.click();
+		repo.appointment.click();
 		String expDate = "17";
-		String expTime = "11:15 - 11:30";
+		String expTime = "09:30 - 09:45";
 		String actDate = repo.ActDate.getText();
 		System.out.println(actDate);
 		String actTime = repo.ActTime.getText();
