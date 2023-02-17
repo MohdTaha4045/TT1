@@ -146,7 +146,9 @@ public class testTreatians extends TreatiansBaseClass
 		repo.passwordEnter();
 		repo.clickSignInButton();
 		repo.drAdhishwar.click();
+		
 		repo.bookAppoinmentButton.click();
+		
 		repo.availableDate.click();
 		repo.scrollWindow();
 		repo.clickslot();
@@ -154,7 +156,7 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println("booking successful");
 		repo.elipsis.click();
 		repo.logoutButton.click();	
-		}
+	}
 	
 	@Test(priority = 4)
 	public void verifyAppointment()

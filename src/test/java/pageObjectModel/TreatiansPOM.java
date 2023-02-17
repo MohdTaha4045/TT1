@@ -32,37 +32,37 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"menu\")")
 	public WebElement elipsis ;
 	
-	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"person circle Log in\"]/android.view.View")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Log in\")")
 	public WebElement LoginOption;
 	
 	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Create new user\"]/android.widget.TextView")
 	public WebElement createNewUserButton;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement firstName;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement lastName;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement email;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[4]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[4]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement phone;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[5]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement password;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[6]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[6]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement confirmPassword;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[7]/android.view.View/android.view.View/android.view.View/android.view.View")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[7]/android.view.View/android.view.View/android.view.View/android.view.View")
 	public WebElement selectCountry;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[1]/android.widget.Button[2]")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.widget.Button[2]")
 	public WebElement india;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[8]/android.view.View/android.view.View/android.view.View/android.view.View")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[8]/android.view.View/android.view.View/android.view.View/android.view.View")
 	public WebElement selectCity;
 	
 	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.widget.ListView/android.view.View[9]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
@@ -71,25 +71,25 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Register\")")
 	public WebElement register;
 
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[1]/android.widget.Button[6]")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.widget.Button[6]")
 	public WebElement Gurugram;
 
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[1]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement loginEmail;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement loginPassword;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[3]/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.Button")
 	public WebElement signInButton;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.widget.EditText")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.widget.EditText")
 	public WebElement searchField;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.TextView")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.view.View[2]/android.view.View/android.view.View/android.view.View[3]/android.view.View/android.widget.TextView")
 	public WebElement citiesScrollDown;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.app.Dialog/android.view.View/android.view.View[1]/android.widget.Button[4]")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.widget.Button[4]")
 	public WebElement FaridaBad;
 	
 
@@ -122,7 +122,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Book Appointment\")")
 	public WebElement bookAppoinmentButton;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"17\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"18\")")
 	public WebElement availableDate;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
