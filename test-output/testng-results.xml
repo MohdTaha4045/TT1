@@ -2,20 +2,20 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-20T16:49:12 IST" name="Default suite" finished-at="2023-02-20T16:49:47 IST" duration-ms="35792">
+  <suite started-at="2023-02-20T17:13:50 IST" name="Default suite" finished-at="2023-02-20T17:14:39 IST" duration-ms="48919">
     <groups>
     </groups>
-    <test started-at="2023-02-20T16:49:12 IST" name="Default test" finished-at="2023-02-20T16:49:47 IST" duration-ms="35792">
+    <test started-at="2023-02-20T17:13:50 IST" name="Default test" finished-at="2023-02-20T17:14:39 IST" duration-ms="48919">
       <class name="test.testTreatians">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T16:49:12 IST" name="setup" finished-at="2023-02-20T16:49:23 IST" duration-ms="11321" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T17:13:50 IST" name="setup" finished-at="2023-02-20T17:14:12 IST" duration-ms="22338" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAppointment()[pri:4, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T16:49:23 IST" name="verifyAppointment" finished-at="2023-02-20T16:49:47 IST" duration-ms="24252" status="PASS">
+        <test-method signature="verifyAppointment()[pri:4, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T17:14:12 IST" name="verifyAppointment" finished-at="2023-02-20T17:14:38 IST" duration-ms="25625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAppointment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T16:49:47 IST" name="tearDown" finished-at="2023-02-20T16:49:47 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@7dc19a70]" started-at="2023-02-20T17:14:38 IST" name="tearDown" finished-at="2023-02-20T17:14:39 IST" duration-ms="728" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -48,16 +48,16 @@ public class TreatiansBaseClass
 			File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			Date currentdate = new Date();
 			String screenshotFileName = currentdate.toString().replace(" ", "_").replace(":", "_");;
-			FileUtils.copyFile(screenshotFile, new File("C:\\Users\\Fleek\\git\\TT1\\screenshot"+screenshotFileName+".png"));
-			Allure.attachment(screenshotFileName, new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
-			
-		}
+			FileUtils.copyFile(screenshotFile, new File(".//screenshot//"+screenshotFileName+".png"));
+			Allure.attachment(screenshotFileName, new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));		
+		}	
 		
 		@AfterTest
 		public void tearDown()
 		{
-			/////driver.quit();
+			driver.quit();
 		}
+		
 		public void onTestFailure(ITestResult result) 
 		{
 			// TODO Auto-generated method stub
