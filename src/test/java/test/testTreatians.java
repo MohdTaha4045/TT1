@@ -92,21 +92,20 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println("Login Test");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.elipsis.click();
 		
-		repo.LoginOption.click();
-		
-		repo.loginEmail.click();
+		//repo.elipsis.click();
+		//repo.LoginOption.click();
+		//repo.loginEmail.click();
+		repo.loginPage();
 		repo.loginEmail.sendKeys(Email);
-		
-		repo.loginPassword.click();
+		//repo.loginPassword.click();
 		repo.loginPassword.sendKeys(Password);
-		
-		repo.signInButton.click();
-		Thread.sleep(3000);
-		
+		repo.clickSignInButton();
+
 		
 		
+		
+		//Thread.sleep(3000);
 		
 		if(Exp.equals("valid"))
 		{
@@ -131,6 +130,7 @@ public class testTreatians extends TreatiansBaseClass
 
 	}
 	
+		
 	@Test(priority = 3)
 	public void BookAppointment()
 	{
@@ -140,12 +140,11 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println("Booking Appointment");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.elipsis.click();
-		repo.LoginOption.click();
-		repo.emailEnter();
-		repo.passwordEnter();
-		repo.clickSignInButton();
+		
+		repo.loginDone();
+
 		repo.drAdhishwar.click();
+
 		
 		repo.bookAppoinmentButton.click();
 		
@@ -154,8 +153,7 @@ public class testTreatians extends TreatiansBaseClass
 		repo.clickslot();
 		repo.bookAppoinmentButton.click();
 		System.out.println("booking successful");
-		repo.elipsis.click();
-		repo.logoutButton.click();	
+		repo.logoutPage();	
 	}
 	
 	@Test(priority = 4)
@@ -165,16 +163,13 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println("Appointment Verification");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
-		repo.elipsis.click();
-		repo.LoginOption.click();
-		repo.emailEnter();
-		repo.passwordEnter();
-		repo.clickSignInButton();
 		
+		repo.loginDone();
+
 		repo.elipsis.click();
 		repo.appointment.click();
-		String expDate = "17";
-		String expTime = "09:30 - 09:45";
+		String expDate = "21";
+		String expTime = "08:00 - 08:15";
 		String actDate = repo.ActDate.getText();
 		System.out.println(actDate);
 		String actTime = repo.ActTime.getText();

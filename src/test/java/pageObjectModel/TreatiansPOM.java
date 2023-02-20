@@ -1,6 +1,9 @@
 package pageObjectModel;
 
-import java.sql.Driver;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -24,15 +27,26 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TreatiansPOM extends TreatiansBaseClass
 {
+	public static String TodayDate() 
+   	{
+        Date today = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("dd");
+        String todayStr = dateFormat.format(today);
+       // System.out.println("Today's date is: " + todayStr);
+        return todayStr;
+   	} 
+	private static final String DD = "21" ;
+
 	public TreatiansPOM(AndroidDriver driver) 
 	{
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
+		
 	}
 
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"menu\")")
+	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.widget.Button")
 	public WebElement elipsis ;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Log in\")")
+	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"person circle Log in\"]/android.view.View")
 	public WebElement LoginOption;
 	
 	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"Create new user\"]/android.widget.TextView")
@@ -92,10 +106,6 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(xpath = "//android.view.View[1]/android.widget.Button[4]")
 	public WebElement FaridaBad;
 	
-
-	@AndroidFindBy(xpath = "/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
-	public WebElement bookAppointment;
-	
 	@AndroidFindBy(uiAutomator = "new UiSelector().className(android.widget.Button).instance(0)")
 	public WebElement slotwhenarrownotvisible;
 	
@@ -105,13 +115,10 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().className(android.widget.Button).instance(2)")
 	public WebElement slotwhenarrowvisible;
 	
-	@AndroidFindBy(xpath = "//android.view.View[8]/android.view.View/android.view.View/android.view.View")
-	public WebElement logoutButton;
+	//@AndroidFindBy(xpath = "//android.view.View[8]/android.view.View/android.view.View/android.view.View")
+	//public WebElement logoutButton;
 	
 	//String hompage = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView")).getText();
-
-	//@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Log out\")")
-	//public WebElement logoutButton;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"back\")")
 	public WebElement backButton;
@@ -122,7 +129,13 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Book Appointment\")")
 	public WebElement bookAppoinmentButton;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"18\")")
+	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
+	public WebElement bookAppointment;
+	
+	  
+	   
+	   
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + DD + "\")")
 	public WebElement availableDate;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
@@ -134,10 +147,10 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Home\")")
 	public WebElement home;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 17-Feb-2023\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Date : 21-Feb-2023\")")
 	public WebElement ActDate;
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 09:30 - 09:45\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Appointment Time : 08:00 - 08:15\")")
 	public WebElement ActTime;
 	
 	
@@ -147,6 +160,19 @@ public class TreatiansPOM extends TreatiansBaseClass
 		elipsis.click();
 		LoginOption.click();
 	}
+	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"menu\")")
+	public WebElement menu;
+	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Log out\")")
+	public WebElement logoutButton;
+	
+	public void logoutPage()
+	{	
+		menu.click();
+		logoutButton.click();
+	}
+
 	
 
 	public void signUp()
@@ -260,6 +286,15 @@ public class TreatiansPOM extends TreatiansBaseClass
 		loginPassword.sendKeys("12345678");
 	}
 	
+	public void loginDone()
+	{	
+		elipsis.click();
+		LoginOption.click();
+		loginEmail.sendKeys("gayaas@gmail.com");
+		loginPassword.sendKeys("12345678");
+		signInButton.click();
+	}
+	
 	public void clickSignInButton()
 	{
 		signInButton.click();
@@ -277,6 +312,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 		FaridaBad.click();
 	}
 	
+
 	
 	public void scrollWindow()
 	{

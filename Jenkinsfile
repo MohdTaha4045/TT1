@@ -5,29 +5,30 @@ pipeline{
     stage('Build')
     {
       steps{
-        echo "Building the code"
-        bat "mvn clean"
+        echo "Creating a new User"
+        creatingNewUser()
       }
     }
     stage('Test')
     {
       steps{
-        echo "Testing the code"
-        bat "mvn test"
+        echo "Login positive & negative test cases"
+        	loginTest1(String Email,String Password,String Exp)
+        
       }
     }
     stage('compile')
     {
       steps{
-        echo "compiling the code"
-        bat "mvn compile"
+        echo "booking an appointment"
+        BookAppointment()
       }
     }
     stage('Deploy')
     {
       steps{
-        echo "Deploying the code"
-        bat "mvn clean"
+        echo "Verifying an appointment"
+        verifyAppointment()
       }
     }
   }
