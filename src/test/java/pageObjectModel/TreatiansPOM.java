@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
@@ -35,7 +34,7 @@ public class TreatiansPOM extends TreatiansBaseClass
        // System.out.println("Today's date is: " + todayStr);
         return todayStr;
    	} 
-	private static final String DD = "22" ;
+	private static final String DD = "21" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
 	{
@@ -115,11 +114,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().className(android.widget.Button).instance(2)")
 	public WebElement slotwhenarrowvisible;
 	
-	//@AndroidFindBy(xpath = "//android.view.View[8]/android.view.View/android.view.View/android.view.View")
-	//public WebElement logoutButton;
-	
-	//String hompage = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView")).getText();
-	
+
 	@AndroidFindBy(xpath = "//android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 	public WebElement backButton;
 	
@@ -209,9 +204,6 @@ public class TreatiansPOM extends TreatiansBaseClass
 	public void passPhone()
 	{
 		phone.click();
-		//WebDriverWait wait1=new WebDriverWait(driver,Duration.ofSeconds(10));
-		//wait1.until(ExpectedConditions.elementToBeClickable(phone));
-		//phone.sendKeys("8900735876");
 		driver.pressKey(new KeyEvent(AndroidKey.DIGIT_7));
 		driver.pressKey(new KeyEvent(AndroidKey.DIGIT_5));
 		driver.pressKey(new KeyEvent(AndroidKey.DIGIT_0));
