@@ -93,18 +93,11 @@ public class testTreatians extends TreatiansBaseClass
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		
-		//repo.elipsis.click();
-		//repo.LoginOption.click();
-		//repo.loginEmail.click();
 		repo.loginPage();
 		repo.loginEmail.sendKeys(Email);
-		//repo.loginPassword.click();
 		repo.loginPassword.sendKeys(Password);
 		repo.clickSignInButton();
 
-		
-		
-		
 		//Thread.sleep(3000);
 		
 		if(Exp.equals("valid"))
@@ -164,9 +157,13 @@ public class testTreatians extends TreatiansBaseClass
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		
-		repo.loginDone();
+		repo.menu.click();
+		repo.LoginOption.click();
+		repo.emailEnter();
+		repo.passwordEnter();
+		repo.clickSignInButton();
 
-		repo.elipsis.click();
+		repo.menu.click();
 		repo.appointment.click();
 		String expDate = "21";
 		String expTime = "08:00 - 08:15";
@@ -188,7 +185,7 @@ public class testTreatians extends TreatiansBaseClass
 			Assert.assertTrue(2 == 1 );
 		
 		
-	}
+		}
 
 	
 }

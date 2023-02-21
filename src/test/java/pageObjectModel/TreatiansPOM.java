@@ -35,7 +35,7 @@ public class TreatiansPOM extends TreatiansBaseClass
        // System.out.println("Today's date is: " + todayStr);
         return todayStr;
    	} 
-	private static final String DD = "21" ;
+	private static final String DD = "22" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
 	{
@@ -120,7 +120,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	
 	//String hompage = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.TextView")).getText();
 	
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"back\")")
+	@AndroidFindBy(xpath = "//android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.Button")
 	public WebElement backButton;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Adhishwar Sharmaaaa\")")
