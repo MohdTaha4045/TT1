@@ -139,7 +139,7 @@ public class testTreatians extends TreatiansBaseClass
 		repo.drAdhishwar.click();
 
 		
-		repo.bookAppoinmentButton.click();
+		repo.bookAppointment.click();
 		
 		repo.availableDate.click();
 		repo.scrollWindow();
