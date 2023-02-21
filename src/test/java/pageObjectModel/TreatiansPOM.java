@@ -257,7 +257,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	public void passsAddress()
 	{
 		//Address.click();
-		Address.sendKeys("12/486 Gulzaar baagh");
+		Address.sendKeys("12/486 Gulzaar baagh, Kathmandu 44600");
 	}
 	
 	public void clickRegister()
@@ -302,6 +302,11 @@ public class TreatiansPOM extends TreatiansBaseClass
 	{
 		citiesScrollDown.click();
 		FaridaBad.click();
+	}
+	
+	public void bookAppoitment()
+	{
+		bookAppoinmentButton.click();
 	}
 	
 
