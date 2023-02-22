@@ -156,7 +156,7 @@ public class testTreatians extends TreatiansBaseClass
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		TreatiansPOM repo=new TreatiansPOM(driver);
 		
-		repo.menu.click();
+		repo.elipsis.click();
 		repo.LoginOption.click();
 		repo.emailEnter();
 		repo.passwordEnter();

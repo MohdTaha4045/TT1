@@ -34,7 +34,7 @@ public class TreatiansPOM extends TreatiansBaseClass
        // System.out.println("Today's date is: " + todayStr);
         return todayStr;
    	} 
-	private static final String DD = "21" ;
+	private static final String DD = "22" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
 	{
