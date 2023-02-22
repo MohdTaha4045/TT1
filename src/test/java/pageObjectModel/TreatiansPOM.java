@@ -124,7 +124,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Book Appointment\")")
 	public WebElement bookAppoinmentButton;
 	
-	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
+	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
 	public WebElement bookAppointment;
 	
 	  
