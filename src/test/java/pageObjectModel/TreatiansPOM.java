@@ -34,7 +34,7 @@ public class TreatiansPOM extends TreatiansBaseClass
        // System.out.println("Today's date is: " + todayStr);
         return todayStr;
    	} 
-	private static final String DD = "22" ;
+	private static final String todaysDate = "23" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
 	{
@@ -130,7 +130,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	  
 	   
 	   
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + DD + "\")")
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + todaysDate + "\")")
 	public WebElement availableDate;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
