@@ -139,8 +139,8 @@ public class testTreatians extends TreatiansBaseClass
 
 		
 		repo.bookAppoitment();
-		
-		repo.availableDate.click();
+		repo.TodayDate();
+		//repo.availableDate.click();
 		repo.scrollWindow();
 		repo.clickslot();
 		repo.bookAppoitment();

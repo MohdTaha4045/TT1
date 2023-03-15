@@ -26,22 +26,33 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class TreatiansPOM extends TreatiansBaseClass
 {
-	public static String TodayDate() 
+	@AndroidFindBy(className="android.widget.TextView")
+	public List<WebElement> allText; 
+	
+	public void TodayDate() 
    	{
         Date today = new Date();
         DateFormat dateFormat = new SimpleDateFormat("dd");
         String todayStr = dateFormat.format(today);
-       // System.out.println("Today's date is: " + todayStr);
-        return todayStr;
+        
+        
+         for(WebElement text: allText)
+         {
+        	 String name = text.getText();
+        	 if(name.equals(todayStr))
+        	 {
+        		 text.click();
+        	 }
+         }
    	} 
-	private static final String todaysDate = "23" ;
+	//private static final String todaysDate = "23" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
 	{
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
 	}
-
+	
 	@AndroidFindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.widget.Button")
 	public WebElement elipsis ;
 	
@@ -130,8 +141,8 @@ public class TreatiansPOM extends TreatiansBaseClass
 	  
 	   
 	   
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + todaysDate + "\")")
-	public WebElement availableDate;
+	//@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + todaysDate + "\")")
+	//public WebElement availableDate;
 	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"My Appointments\")")
 	public WebElement myAppointment;
@@ -364,6 +375,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 		slotwhenarrownotvisible.click();
 	}
 
+	
 	
  }
 }

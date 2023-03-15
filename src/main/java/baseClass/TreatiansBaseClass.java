@@ -19,10 +19,10 @@ import io.qameta.allure.Allure;
 
 public class TreatiansBaseClass 
 {
-		public static AndroidDriver driver;
+		public static  AndroidDriver driver;
 		@SuppressWarnings("deprecation")
 		@BeforeClass
-		public static void setup() throws MalformedURLException, InterruptedException
+		public void setup() throws MalformedURLException, InterruptedException
 	 
 		{
 			DesiredCapabilities cap = new DesiredCapabilities();
@@ -32,7 +32,7 @@ public class TreatiansBaseClass
 		       // cap.setCapability("platformVersion", "7");
 		        cap.setCapability("appPackage", "com.treatians");
 		        cap.setCapability("appActivity", "com.treatians.MainActivity");	        
-				URL url = new URL("http://0.0.0.0:4723/wd/hub");
+				URL url = new URL("http://127.0.0.1:4723/wd/hub");
 				 driver = new AndroidDriver(url, cap);
 				 driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 				 System.out.println("Driver is launched");
