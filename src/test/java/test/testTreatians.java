@@ -172,7 +172,7 @@ public class testTreatians extends TreatiansBaseClass
 		System.out.println(actTime);
 		String expDr = "Adhishwar Sharmaaaa";
 		String actDr = repo.drAdhishwar.getText();
-		
+		System.out.println("success");
 		if(actDate.contains(expDate))
 		{
 			if(actTime.contains(expTime))

@@ -33,7 +33,7 @@ public class Learning
 	public void setup() throws MalformedURLException, InterruptedException
  
 	{
-		DesiredCapabilities cap = new DesiredCapabilities();
+		DesiredCapabilities  cap = new DesiredCapabilities();
 		 cap.setCapability("deviceName", "Pixel 4XL API 30");
 	        cap.setCapability("uuid", "emulator-5554");
 	        cap.setCapability("platformName", "Android");

@@ -2,16 +2,16 @@
 <testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-15T13:47:06 IST" name="Default suite" finished-at="2023-03-15T13:47:52 IST" duration-ms="45671">
+  <suite started-at="2023-03-16T15:48:57 IST" name="Default suite" finished-at="2023-03-16T15:50:11 IST" duration-ms="74001">
     <groups>
     </groups>
-    <test started-at="2023-03-15T13:47:06 IST" name="Default test" finished-at="2023-03-15T13:47:52 IST" duration-ms="45671">
+    <test started-at="2023-03-16T15:48:57 IST" name="Default test" finished-at="2023-03-16T15:50:11 IST" duration-ms="74001">
       <class name="test.testTreatians">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@3e0e1046]" started-at="2023-03-15T13:47:06 IST" name="setup" finished-at="2023-03-15T13:47:39 IST" duration-ms="32853" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.testTreatians@3e0e1046]" started-at="2023-03-16T15:48:57 IST" name="setup" finished-at="2023-03-16T15:49:59 IST" duration-ms="61929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="BookAppointment()[pri:3, instance:test.testTreatians@3e0e1046]" started-at="2023-03-15T13:47:39 IST" name="BookAppointment" finished-at="2023-03-15T13:47:40 IST" duration-ms="475" status="FAIL">
+        <test-method signature="BookAppointment()[pri:3, instance:test.testTreatians@3e0e1046]" started-at="2023-03-16T15:49:59 IST" name="BookAppointment" finished-at="2023-03-16T15:50:00 IST" duration-ms="1023" status="FAIL">
           <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
               <![CDATA[java.lang.ExceptionInInitializerError
@@ -22,7 +22,7 @@ at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(Defaul
 at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:146)
 at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:111)
 at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:103)
-at pageObjectModel.TreatiansPOM.<init>(TreatiansPOM.java:52)
+at pageObjectModel.TreatiansPOM.<init>(TreatiansPOM.java:53)
 at test.testTreatians.BookAppointment(testTreatians.java:134)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
@@ -85,7 +85,7 @@ at net.sf.cglib.core.AbstractClassGenerator.generate(AbstractClassGenerator.java
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BookAppointment -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@3e0e1046]" started-at="2023-03-15T13:47:50 IST" name="tearDown" finished-at="2023-03-15T13:47:52 IST" duration-ms="2162" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.testTreatians@3e0e1046]" started-at="2023-03-16T15:50:10 IST" name="tearDown" finished-at="2023-03-16T15:50:11 IST" duration-ms="1533" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

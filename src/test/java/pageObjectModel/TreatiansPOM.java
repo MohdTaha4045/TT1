@@ -35,7 +35,7 @@ public class TreatiansPOM extends TreatiansBaseClass
         DateFormat dateFormat = new SimpleDateFormat("dd");
         String todayStr = dateFormat.format(today);
         
-        
+         
          for(WebElement text: allText)
          {
         	 String name = text.getText();
@@ -48,7 +48,8 @@ public class TreatiansPOM extends TreatiansBaseClass
 	//private static final String todaysDate = "23" ;
 
 	public TreatiansPOM(AndroidDriver driver) 
-	{
+	{	
+		
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 		
 	}
@@ -371,7 +372,8 @@ public class TreatiansPOM extends TreatiansBaseClass
 		slotwhenarrowvisible.click();
 	}
 	}
-	catch(NoSuchElementException e) {
+	catch(NoSuchElementException e) 
+	{
 		slotwhenarrownotvisible.click();
 	}
 
