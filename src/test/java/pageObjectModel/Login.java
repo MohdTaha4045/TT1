@@ -23,6 +23,10 @@ public class Login
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Email*\")")
 	public WebElement email;
 	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Login\")")
+	public WebElement loginAfterSignUp;
+	
+	
 	@AndroidFindBy(xpath = "//android.view.ViewGroup/android.widget.ImageView")
 	public WebElement click ;
 	
@@ -42,7 +46,7 @@ public class Login
 	
 	public void signIN(String username , String pass)
 	{
-		signInButton.click();
+	
 		email.sendKeys(username);
 		click.click();
 		password.sendKeys(pass);

@@ -1,0 +1,1 @@
+{"uuid":"35ff564b-95f2-4dc1-a413-63143a021b5a","name":"test.testTreatians","children":["aa6a67ae-e95d-4991-8a53-ad14cad89f93"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1686829310342,"stop":1686829327516}],"afters":[],"start":1686829310202,"stop":1686829368431}

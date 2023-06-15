@@ -6,11 +6,18 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -22,67 +29,8 @@ import io.qameta.allure.Allure;
 public class TreatiansBaseClass 
 {
 		public static  AndroidDriver driver;
-		/*@BeforeSuite
-		public void setUp() {
-		    // Start Appium server in a separate thread
-		    Thread appiumThread = new Thread(this::startAppium);
-		    appiumThread.start();
-
-		    // Start emulator in a separate thread
-		    Thread emulatorThread = new Thread(this::startEmulator);
-		    emulatorThread.start();
-
-		    // Wait for both threads to finish
-		    try {
-		        appiumThread.join();
-		        emulatorThread.join();
-		    } catch (InterruptedException e) {
-		        e.printStackTrace();
-		    }
-		}
-
-		public void startAppium() {
-		    try {
-		        // Start the Appium server
-		        String command = "appium -a 127.0.0.1 -p 4723";
-		        ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", command);
-		        Process process = builder.start();
-
-		        // Read the output of the window
-		        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-		        String line;
-		        while ((line = reader.readLine()) != null) {
-		            System.out.println(line);
-		        }
-		    } catch (IOException e) {
-		        e.printStackTrace();
-		    }
-		}
-
-		public void startEmulator() {
-		    try {
-		        // Navigate to the emulator directory
-		        String command1 = "cd C:\\Users\\Fleek\\AppData\\Local\\Android\\Sdk\\emulator";
-		        ProcessBuilder builder1 = new ProcessBuilder("cmd.exe", "/c", command1);
-		        builder1.directory(new File("C:\\Users\\Fleek\\AppData\\Local\\Android\\Sdk\\emulator"));
-		        builder1.start();
-
-		        // Start the emulator
-		        String command2 = "emulator -avd Pixel_4_XL_API_30";
-		        ProcessBuilder builder2 = new ProcessBuilder("cmd.exe", "/c", command2);
-		        builder2.directory(new File("C:\\Users\\Fleek\\AppData\\Local\\Android\\Sdk\\emulator"));
-		        Process process = builder2.start();
-
-		        // Read the output of the window
-		        BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-		        String line;
-		        while ((line = reader.readLine()) != null) {
-		            System.out.println(line);
-		        }
-		    } catch (IOException e) {
-		        e.printStackTrace();
-		    }
-		}*/
+		public static WebDriver driver1;
+		
 		@SuppressWarnings("deprecation")
 		@BeforeClass
 		public void setup() throws MalformedURLException, InterruptedException
@@ -101,9 +49,17 @@ public class TreatiansBaseClass
 				 System.out.println("Driver is launched");
 		}
 		
-		public void webSetUp()
+		public void scrollWindow()
 		{
-			
+			PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+			   Sequence tap = new Sequence(finger, 1);
+			   tap.addAction(finger.createPointerMove(Duration.ofMillis(0),
+			   PointerInput.Origin.viewport(), 655, 1920));
+			   tap.addAction(finger.createPointerDown(0));
+			   tap.addAction(finger.createPointerMove(Duration.ofMillis(100),
+			   PointerInput.Origin.viewport(),655, 1520));
+			   tap.addAction(finger.createPointerUp(0));
+			   driver.perform(Arrays.asList(tap));	
 		}
 		
 		public void failedTest(String testMethod , AndroidDriver driver) throws IOException
@@ -117,11 +73,9 @@ public class TreatiansBaseClass
 			Allure.attachment(screenshotFileName, new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));		
 		}	
 		
-		@AfterTest
-		public void tearDown()
-		{
-			driver.quit();
-		}
+		/*
+		 * @AfterTest public void tearDown() { driver.quit(); }
+		 */
 		
 		public void onTestFailure(ITestResult result) 
 		{

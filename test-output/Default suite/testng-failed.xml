@@ -6,8 +6,7 @@
       <class name="test.testTreatians">
         <methods>
           <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="Signin"/>
+          <include name="WebUser_Verification"/>
         </methods>
       </class> <!-- test.testTreatians -->
     </classes>
