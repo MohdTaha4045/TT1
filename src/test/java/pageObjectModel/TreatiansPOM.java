@@ -133,14 +133,23 @@ public class TreatiansPOM extends TreatiansBaseClass
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Adhishwar Sharmaaaa\")")
 	public WebElement drAdhishwar;
 	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Dr. Tanvi Bhatt\")")
+	public WebElement drTanvi;
+	
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Book Appointment\")")
 	public WebElement bookAppoinmentButton;
 	
 	@AndroidFindBy(xpath = "//android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.widget.Button")
 	public WebElement bookAppointment;
 	
-	  
-	   
+	@AndroidFindBy(xpath = "//android.view.View[@content-desc=\"medkit Treatments\"]/android.view.View")
+	public WebElement Treatment;
+	
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Oncology\")")
+	public WebElement Oncology; 
+	 
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Urology\")")
+	public WebElement Urology;
 	   
 	//@AndroidFindBy(uiAutomator = "new UiSelector().text(\"" + todaysDate + "\")")
 	//public WebElement availableDate;
@@ -292,7 +301,7 @@ public class TreatiansPOM extends TreatiansBaseClass
 	
 	public void loginDone()
 	{	
-		elipsis.click();
+		menu.click();
 		LoginOption.click();
 		loginEmail.sendKeys("gayaas@gmail.com");
 		loginPassword.sendKeys("12345678");

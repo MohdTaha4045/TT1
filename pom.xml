@@ -55,8 +55,9 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+    <version>4.10.0</version>
 </dependency>
+
 <dependency>
     <groupId>org.slf4j</groupId>
     <artifactId>slf4j-api</artifactId>
@@ -74,13 +75,15 @@
     <artifactId>log4j-core</artifactId>
     <version>2.19.0</version>
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.7.1</version>
-    <scope>compile</scope>
+    <version>7.4.0</version>
+    <scope>test</scope>
 </dependency>
+
 <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
 <dependency>
     <groupId>io.qameta.allure</groupId>
@@ -93,6 +96,8 @@
     <artifactId>commons-io</artifactId>
     <version>1.3.2</version>
 </dependency>
+
+
 <dependency>
             <groupId>org.bytedeco.javacpp-presets</groupId>
             <artifactId>tesseract</artifactId>
@@ -105,7 +110,11 @@
     <version>3.3.0</version>
 </dependency>
 
-
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.3.2</version>
+</dependency>
 </dependencies>
  <properties>
      <jvm.options>--add-opens java.base/java.lang=ALL-UNNAMED</jvm.options>

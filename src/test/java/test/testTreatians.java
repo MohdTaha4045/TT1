@@ -8,10 +8,12 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import Web.WebTest;
 import baseClass.TreatiansBaseClass;
 import generalUtility.CustomListener;
 import generalUtility.XLUtility;
 import io.qameta.allure.Allure;
+import pageObjectModel.Login;
 import pageObjectModel.TreatiansPOM;
 
 @Listeners(CustomListener.class)
@@ -19,7 +21,7 @@ public class testTreatians extends TreatiansBaseClass
 {
 	
 
-	@Test(priority = 1) 
+	/*@Test(priority = 1) 
 	public void creatingNewUser() throws InterruptedException
 	{
 		Allure.step("SingnUp");
@@ -62,6 +64,8 @@ public class testTreatians extends TreatiansBaseClass
 		repo.backButton.click();
 
 	}
+	
+	
 	
 	
 	@DataProvider(name = "logindata")
@@ -135,7 +139,7 @@ public class testTreatians extends TreatiansBaseClass
 		
 		repo.loginDone();
 
-		repo.drAdhishwar.click();
+		repo.drTanvi.click();
 
 		
 		repo.bookAppoitment();
@@ -187,4 +191,70 @@ public class testTreatians extends TreatiansBaseClass
 		}
 
 	
+	@Test(priority = 5)
+	public void verifyTreatments()
+	{
+		TreatiansPOM repo=new TreatiansPOM(driver);	
+		repo.loginDone();
+
+		repo.menu.click();
+		repo.Treatment.click();
+		//repo.Oncology.click();
+		Assert.assertTrue(true);
+		
+	}
+	
+	@Test(priority = 6)
+	public void verifyUrology()	
+	{
+		TreatiansPOM repo=new TreatiansPOM(driver);	
+		repo.loginDone();
+
+		repo.menu.click();
+		repo.Treatment.click();
+		
+		repo.scrollWindow();
+		repo.Urology.click();
+		Assert.assertTrue(true);
+		
+	}*/
+	
+	@Test(priority = 3)
+	public void Signin() throws InterruptedException
+	{
+		//this.driver=driver;
+		Allure.step("LOgin Test");
+
+		System.out.println("Sign in Test");
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		Login repo=new Login(driver);
+		repo.signIN("Gayaas@gmail.com", "12345678");
+		String expectedText = repo.homePageText.getText(); 
+		String actualText = "Treatians";
+		Assert.assertEquals(expectedText,actualText);
+		System.out.println("Sign in Successful");
+		
+		WebTest web = new WebTest();
+		 web.webcall();
+		 System.out.println("webdriver is called");
+		
+		
+		
+	}
+	
+	@Test(priority = 4)
+	public void webVerification() throws InterruptedException
+	{
+		 WebTest web = new WebTest();
+		 web.webcall();
+		 System.out.println("webdriver is called");
+	}
 }
+
+	
+	
+	
+	
+
+	
+
