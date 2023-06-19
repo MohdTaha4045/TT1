@@ -3,11 +3,13 @@ package Web;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import baseClass.TreatiansBaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -27,11 +29,19 @@ public class WebTest extends TreatiansBaseClass
 	@FindBy(id = "mat-input-0")
 	public WebElement email;
 	
+
+	@FindBy(xpath ="//input[@type='text']")
+	public WebElement emailAdminTextFeild;
+	
+	@FindBy(xpath = "//input[@type='password']")
+	public WebElement passwordAdminTextFeild;
+	
 	@FindBy(xpath = "//input[@type='password']")
 	public WebElement password;
 	
-	@FindBy(xpath = "//button[normalize-space()='Sign In']")
-	public WebElement signIn;
+	@FindBy(xpath = "//button[normalize-space()=\"Sign In\"]")
+	public WebElement signInButton;
+	
 
 	@FindBy(xpath = "//a[normalize-space()='Login']")
 	public WebElement logInButtonHomePage;
@@ -61,12 +71,8 @@ public class WebTest extends TreatiansBaseClass
 		Thread.sleep(3000);
 	}
 	
-	public void emailVerification() throws InterruptedException 
-	{	
-		driver1.findElement(By.xpath("//div[contains(text(),'" + tt1.USERNAME + "')]"));
-	}
 	
-	public void WebVerification(String username, String pass) throws InterruptedException 
+	public void WebLogin(String username, String pass) throws InterruptedException 
 	{	
 		email.click();
 		email.sendKeys(username);
@@ -74,7 +80,49 @@ public class WebTest extends TreatiansBaseClass
 		password.click();
 		password.sendKeys(pass);
 		
-		signIn.click();
+		signInButton.click();
+	}
+	
+	public void emailVerification() throws InterruptedException 
+	{	
+		
+		
+		String VerifyUsername = driver1.findElement(By.xpath("//div[@title='" + testTreatians.USERNAME +"']")).getText();
+		Assert.assertEquals(VerifyUsername, testTreatians.USERNAME, "User Is Listed");
+		
+	}
+	public void UpdateUserDetailsFromAdminSide(String updatedNumber) throws InterruptedException {
+		
+		WebElement element=driver1.findElement(By.xpath("//tbody[1]/tr[1]/th[1]"));
+		Thread.sleep(2000);
+		element.click();
+		
+				//div[@title="gayas khan"]
+				//div[@title='" + testTreatians.firstname + " " + testTreatians.lastname + "']
+				
+		WebElement e1 = driver1.findElement(By.xpath("//input[@type='number']"));
+		e1.clear();
+		e1.sendKeys(updatedNumber);
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//mat-select[@formcontrolname='city']//div[contains(@class,'mat-select-arrow-wrapper')]/div")).click();
+		driver.findElement(By.xpath("//span[normalize-space()='Ahmedabad']")).click();
+		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
+		
+	}
+	
+	public void AdminWebVerification() throws InterruptedException 
+	{	
+		emailAdminTextFeild.clear();
+		emailAdminTextFeild.click();
+		emailAdminTextFeild.sendKeys("admin@rlv.com");
+		
+		passwordAdminTextFeild.clear();
+		passwordAdminTextFeild.click();
+		passwordAdminTextFeild.sendKeys("password");
+		
+		signInButton.click();
+		
+		//div[@title='"+testTretians.firstname+" "+testTreatians.lastname+"']"
 	}
 
 }
