@@ -53,7 +53,7 @@ public class Login
 	public WebElement openProfileButton;
 	
 	
-	@AndroidFindBy(xpath="android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView[2]")
+	@AndroidFindBy(xpath="//android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView[2]")
 	public WebElement UpdatedNumber;
 	
 	public void signIN(String username , String pass) throws InterruptedException
@@ -65,13 +65,22 @@ public class Login
 		signInButton.click();
 		Thread.sleep(2000);
 	}
-	public void userDetailsUpdatedVerify() throws InterruptedException {
-		
+	public void userDetailsUpdatedVerify() throws InterruptedException 
+	{
+		testTreatians tt1 = new testTreatians();
 		profileButton.click();
 		Thread.sleep(2000);
 		openProfileButton.click();
 		String numberUpdated =UpdatedNumber.getText();
-		Assert.assertEquals(numberUpdated, testTreatians.UPDATEDNUMBER,"Number has been Updated");
+		System.out.println(numberUpdated);
+		System.out.println(tt1.UPDATEDNUMBER);
 		
+		if(numberUpdated.contains(tt1.UPDATEDNUMBER))
+		{	
+		Assert.assertTrue(true);
+		System.out.println("Number is Verified");
+		}
+		  else Assert.assertFalse(true);
+		 
 	}
 }

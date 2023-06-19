@@ -1,1 +1,0 @@
-{"uuid":"a7e2cdd6-a205-4ce9-9325-1a9c2aa1fe05","name":"DDT.Learning.setup","children":["e1127196-dad8-4ef4-8d2e-f3c438b87083"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1675076831003,"stop":1675076844558}],"afters":[],"start":1675076831003,"stop":1675076844558}

@@ -1,21 +1,16 @@
 package test;
 
-import java.io.IOException;
 import java.time.Duration;
-import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Web.WebTest;
 import baseClass.TreatiansBaseClass;
 import generalUtility.CustomListener;
-import generalUtility.XLUtility;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import pages.Login;
 import pages.SignUp;
-import pages.TreatiansPOM;
 
 @Listeners(CustomListener.class)
 
@@ -26,12 +21,13 @@ public class testTreatians extends TreatiansBaseClass
 	public static String PASSWORD ="12345678";
 	public static String firstname ="gayas";
 	public static String lastname ="khan";
-	public static String MOBNUMBER ="9837462894";
+	public static String MOBNUMBER ="983568483";
 	public static String ADDRESS ="fleek IT Solutions NOIDA";
-	public static String UPDATEDNUMBER ="000000000";
+	public static String UPDATEDNUMBER ="7867563423";
 	
 	
 	@Test(priority = 0)
+	@Step("Open WebApp")
 	public void openWebApp() throws InterruptedException
 	{
 		 WebTest web = new WebTest(driver1);
@@ -40,6 +36,7 @@ public class testTreatians extends TreatiansBaseClass
 	}
 	
 	@Test(priority = 1)
+	@Step("Mobile SignUp")
 	public void MobileSignUp() throws InterruptedException
 	{
 		System.out.println("Sign in Test Through Mobile");
@@ -52,6 +49,7 @@ public class testTreatians extends TreatiansBaseClass
 	}
 	
 	@Test(priority = 2)
+	@Step("User Listing Verification")
 	public void UserListingVerification() throws InterruptedException {
 		
 		WebTest web1 = new WebTest(driver1);
@@ -64,6 +62,7 @@ public class testTreatians extends TreatiansBaseClass
 	}
 	
 	@Test(priority = 3)
+	@Step("Update User Details")
 	public void UpdateUserDetails() throws InterruptedException {
 		WebTest web2 = new WebTest(driver1);
 		web2.UpdateUserDetailsFromAdminSide(UPDATEDNUMBER);
@@ -71,10 +70,10 @@ public class testTreatians extends TreatiansBaseClass
 	}
 	
 	@Test(priority = 4) 
+	@Step("Mobile Verification")
 	public void MobileLogInAndVerification() throws InterruptedException { 
 	
-	Allure.step("Login In Mobile");
-	  
+	Allure.step("Login In Mobile"); 
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	Login log=new Login(driver); 
 	log.signIN(USERNAME, PASSWORD); 
@@ -84,36 +83,6 @@ public class testTreatians extends TreatiansBaseClass
   }
 	
 }
-
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-	
-
-/*
- * @Test(priority = 4) public void WebUser_Verification() throws
- * InterruptedException {
- * 
- * WebTest web = new WebTest(driver1); web.WebLogin(USERNAME, PASSWORD);
- * Thread.sleep(4000);
- * 
- * }
- */
 
 	
 

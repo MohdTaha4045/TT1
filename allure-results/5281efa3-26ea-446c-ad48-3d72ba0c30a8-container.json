@@ -1,1 +1,0 @@
-{"uuid":"5281efa3-26ea-446c-ad48-3d72ba0c30a8","name":"test.WebAndApk","children":["473c7a50-7ea8-46e8-9897-35c6ee5e4118"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1686808892307,"stop":1686808908000}],"afters":[],"start":1686808892270,"stop":1686808927064}

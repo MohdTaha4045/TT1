@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import baseClass.TreatiansBaseClass;
@@ -57,6 +58,15 @@ public class WebTest extends TreatiansBaseClass
 	
 	@FindBy(xpath = "//span[text()='Users']")
 	public WebElement userButtonAdmin;
+	
+	@FindBy(xpath = "//div[@class= 'row'][3]/div[2]/mat-form-field/div")
+	public WebElement dropdown;
+	
+	@FindBy(xpath ="//span[text()='Gurugram']")
+	public WebElement updateCity;
+		
+	@FindBy(xpath = "//button[text()='Save']")
+	public WebElement saveButton;
 
 	
 	public void webcall() throws InterruptedException
@@ -97,17 +107,16 @@ public class WebTest extends TreatiansBaseClass
 		Thread.sleep(2000);
 		element.click();
 		
-				//div[@title="gayas khan"]
-				//div[@title='" + testTreatians.firstname + " " + testTreatians.lastname + "']
 				
 		WebElement e1 = driver1.findElement(By.xpath("//input[@type='number']"));
 		e1.clear();
 		e1.sendKeys(updatedNumber);
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//mat-select[@formcontrolname='city']//div[contains(@class,'mat-select-arrow-wrapper')]/div")).click();
-		driver.findElement(By.xpath("//span[normalize-space()='Ahmedabad']")).click();
-		driver.findElement(By.xpath("//button[normalize-space()='Save']")).click();
+ 
+		dropdown.click();
+		updateCity.click();
 		
+		saveButton.click();
 	}
 	
 	public void AdminWebVerification() throws InterruptedException 
@@ -122,7 +131,31 @@ public class WebTest extends TreatiansBaseClass
 		
 		signInButton.click();
 		
-		//div[@title='"+testTretians.firstname+" "+testTreatians.lastname+"']"
+		
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//div[@title='"+testTretians.firstname+" "+testTreatians.lastname+"']"
+
+//div[@title="gayas khan"]
+		//div[@title='" + testTreatians.firstname + " " + testTreatians.lastname + "']

@@ -5,7 +5,6 @@
     <classes>
       <class name="test.testTreatians">
         <methods>
-          <include name="UpdateUserDetails"/>
           <include name="setup"/>
           <include name="MobileLogInAndVerification"/>
         </methods>

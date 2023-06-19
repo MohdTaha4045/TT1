@@ -20,9 +20,6 @@ public class CustomListener  extends TreatiansBaseClass implements ITestListener
 				{
 				e.printStackTrace();
 				}
-		}
-		
-		
-	
-
+			
+	}
 }
